@@ -4,6 +4,17 @@ version = "0.1.0"
 authors = ["masatoshi"]
 edition = "2018"
 
+[package.metadata.cargo-compete]
+config = "../compete.toml"
+
+[package.metadata.cargo-compete.bin]
+a = {name = "abc148-a",problem = {platform = "atcoder",contest = "abc148",index = "A"}}
+b = {name = "abc148-b",problem = {platform = "atcoder",contest = "abc148",index = "B"}}
+c = {name = "abc148-c",problem = {platform = "atcoder",contest = "abc148",index = "C"}}
+d = {name = "abc148-d",problem = {platform = "atcoder",contest = "abc148",index = "D"}}
+e = {name = "abc148-e",problem = {platform = "atcoder",contest = "abc148",index = "E"}}
+f = {name = "abc148-f",problem = {platform = "atcoder",contest = "abc148",index = "F"}}
+
 # dependencies added to new project
 [dependencies]
 # proconio = "*"
@@ -44,6 +55,26 @@ num-integer = "0.1.42"
 # bitset-fixed = "0.1.0"
 proconio = { version = "0.3.6", features = ["derive"] }
 
-[profile.release]
-lto = true
-panic = 'abort'
+[[bin]]
+name = "abc148-a"
+path = "./src/bin/a.rs"
+
+[[bin]]
+name = "abc148-b"
+path = "./src/bin/b.rs"
+
+[[bin]]
+name = "abc148-c"
+path = "./src/bin/c.rs"
+
+[[bin]]
+name = "abc148-d"
+path = "./src/bin/d.rs"
+
+[[bin]]
+name = "abc148-e"
+path = "./src/bin/e.rs"
+
+[[bin]]
+name = "abc148-f"
+path = "./src/bin/f.rs"
